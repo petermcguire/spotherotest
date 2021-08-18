@@ -12,9 +12,10 @@ Clone this repository and run `docker-compose up -d` to bring up both the `db` a
 Simple integration testing is included, which is accessible by running `make run-tests` in the root directory.
 
 ## Notes
+- This solution is built with Kotlin and the [Spring Boot](https://spring.io/projects/spring-boot) framework.  Spring Boot was chosen as it is the industry standard Kotlin web framework.
 - Only integration testing is carried out.  Preferably unit testing would be also included.
 - Command line testing output is very messy.  Use of Intellij is much nicer.
 - `api-server` has no db auto reconnect or delayed start until a db is connected.
 - `api-server` shuts down ungracefully, ideally this would not be the case.
 - The requirements show the `hours` element of `worked_hours` as type `string`, while the POST request shows it as a double.  This is maintained in the solution but required some special treatment.  Ideally a single type would be used for both cases.
-- Further, if the POST body objecgt included `id`, the code could be limited to one model only for `worked_hours`.
+- Further, if the POST body object included `id`, the code could be limited to one model only for `worked_hours`.
