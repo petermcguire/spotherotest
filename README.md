@@ -12,7 +12,7 @@ Clone this repository and run `docker-compose up -d` to bring up both the `db` a
 Simple integration testing is included, which is accessible by running `make run-tests` in the root directory.
 
 ## Notes
-- This solution is built with Kotlin and the SPring Boot framework.  Spring Boot was chosen as it is the industry standard Kotlin web framework.
+- This solution is built with Kotlin and the [Spring Boot](https://spring.io/projects/spring-boot) framework.  Spring Boot was chosen as it is the industry standard Kotlin web framework.
 - Only integration testing is carried out.  Preferably unit testing would be also included.
 - Command line testing output is very messy.  Use of Intellij is much nicer.
 - `api-server` has no db auto reconnect or delayed start until a db is connected.
