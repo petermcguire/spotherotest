@@ -9,7 +9,7 @@ Clone this repository and run `docker-compose up -d` to bring up both the `db` a
 
 ### Automated Test
 
-Simple integration testing is included, which is accessible by running `make run-tests` in the root directory.
+Simple integration testing is included, which is accessible by running `make run-tests` in the root directory.  Look for test pass/fail status by finding lines in the output like:  `WorkedHourPeriodControllerTest > POST /v1/users/{id}/worked_hours > should add a new worked hour period() PASSED`
 
 ## Notes
 - This solution is built with Kotlin and the [Spring Boot](https://spring.io/projects/spring-boot) framework.  Spring Boot was chosen as it is the industry standard Kotlin web framework.
