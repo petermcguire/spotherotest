@@ -1,9 +1,13 @@
-HELP.md
 .gradle
-build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+!/build
+/build/*
+!/build/libs
+/build/libs/*
+!build/libs/spotherotest-0.0.1-SNAPSHOT.jar
+!.gitignore
 
 ### STS ###
 .apt_generated
