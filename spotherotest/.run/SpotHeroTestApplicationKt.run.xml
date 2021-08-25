@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SpotHeroTestApplicationKt" type="JetRunConfigurationType" nameIsGenerated="true">
+    <envs>
+      <env name="POSTGRES_HOST" value="localhost" />
+      <env name="POSTGRES_PORT" value="5432" />
+      <env name="POSTGRES_DB" value="userhours_dev" />
+      <env name="POSTGRES_USER" value="userhours_user" />
+      <env name="POSTGRES_PASSWORD" value="Super-e3cret" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="co.petermcguire.spotherotest.spotherotest.SpotHeroTestApplicationKt" />
+    <module name="spotherotest.main" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

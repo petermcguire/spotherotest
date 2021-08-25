@@ -1,6 +1,7 @@
 package co.petermcguire.spotherotest.spotherotest.model
 
 import java.io.Serializable
+import javax.validation.constraints.Positive
 import javax.persistence.*
 
 // Class to accommodate composite primary key

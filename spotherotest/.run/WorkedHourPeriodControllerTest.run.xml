@@ -1,0 +1,30 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="WorkedHourPeriodControllerTest" type="GradleRunConfiguration" factoryName="Gradle">
+    <ExternalSystemSettings>
+      <option name="env">
+        <map>
+          <entry key="POSTGRES_DB" value="userhours_dev" />
+          <entry key="POSTGRES_HOST" value="localhost" />
+          <entry key="POSTGRES_PASSWORD" value="Super-e3cret" />
+          <entry key="POSTGRES_PORT" value="5432" />
+          <entry key="POSTGRES_USER" value="userhours_user" />
+        </map>
+      </option>
+      <option name="executionName" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$" />
+      <option name="externalSystemIdString" value="GRADLE" />
+      <option name="scriptParameters" value=":test --tests &quot;co.petermcguire.spotherotest.spotherotest.controller.WorkedHourPeriodControllerTest&quot;" />
+      <option name="taskDescriptions">
+        <list />
+      </option>
+      <option name="taskNames">
+        <list />
+      </option>
+      <option name="vmOptions" />
+    </ExternalSystemSettings>
+    <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+    <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+    <DebugAllEnabled>false</DebugAllEnabled>
+    <method v="2" />
+  </configuration>
+</component>

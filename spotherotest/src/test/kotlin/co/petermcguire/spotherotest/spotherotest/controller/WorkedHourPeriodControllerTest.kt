@@ -1,7 +1,6 @@
 package co.petermcguire.spotherotest.spotherotest.controller
 
 import co.petermcguire.spotherotest.spotherotest.model.AddedWorkedHourPeriod
-import co.petermcguire.spotherotest.spotherotest.model.WorkedHourPeriod
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
@@ -69,11 +68,46 @@ internal class WorkedHourPeriodControllerTest @Autowired constructor(
             mockMvc.get("$baseUrl/$id/worked_hours")
                 .andDo { print() }
                 .andExpect {
+                    status { isOk() }
                     // When this assert fails, it's not at exists but at the JSON expression match.
                     // This isn't ideal but does function for the test.
                     jsonPath("$[?(@.id==$id && @.date==\"${newPeriod.date}\" && @.hours==\"${newPeriod.hours}\")]") {
                         exists()
                     }
+                }
+        }
+
+        @Test
+        fun `should respond with 400 when new period hours are zero`() {
+            val id = 1
+            val newPeriod = AddedWorkedHourPeriod("2021-01-11", 0.0)
+
+            val performPost = mockMvc.post("$baseUrl/$id/worked_hours") {
+                contentType = MediaType.APPLICATION_JSON
+                content = objectMapper.writeValueAsString(newPeriod)
+            }
+
+            performPost
+                .andDo { print() }
+                .andExpect {
+                    status { isBadRequest() }
+                }
+        }
+
+        @Test
+        fun `should respond with 400 when new period hours is greater than 24`() {
+            val id = 1
+            val newPeriod = AddedWorkedHourPeriod("2021-01-11", 24.1)
+
+            val performPost = mockMvc.post("$baseUrl/$id/worked_hours") {
+                contentType = MediaType.APPLICATION_JSON
+                content = objectMapper.writeValueAsString(newPeriod)
+            }
+
+            performPost
+                .andDo { print() }
+                .andExpect {
+                    status { isBadRequest() }
                 }
         }
     }

@@ -3,6 +3,8 @@ package co.petermcguire.spotherotest.spotherotest.model
 import java.io.Serializable
 import java.time.LocalDate
 import javax.persistence.*
+import javax.validation.constraints.Max
+import javax.validation.constraints.Positive
 
 // Class to accommodate composite primary key
 class AddWorkedHourPeriodKey (
@@ -20,6 +22,8 @@ data class AddWorkedHourPeriod(
     val id: Long,
     @Id
     val date: LocalDate,
+    @field:Positive
+    @field:Max(24)
     val hours: Double,
 )
 
